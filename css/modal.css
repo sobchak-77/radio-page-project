@@ -1,0 +1,182 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+  background-color: rgb(0, 0, 0, 0.5);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out,
+              visibility 0.3s ease-in-out;
+}
+
+.modal__card {
+  position: relative;
+  top: 5%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-width: 824px;
+  margin: auto;
+  overflow-y: auto;
+  background-color: var(--black);
+  transform: scale(0);
+  transition: transform 0.6s ease-in-out;
+}
+
+.modal.open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal.open .modal__card {
+  transform: scale(1);
+}
+
+/* --- MODAL CLOSE BUTTON --- */
+
+.modal__close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
+.modal__close circle,
+.modal__close path {
+  transition: stroke 0.4s ease-in-out;
+}
+
+.modal__close:focus circle,
+.modal__close:focus path {
+  stroke: var(--primary-light);
+}
+
+.modal__close:hover circle,
+.modal__close:hover path {
+  stroke: var(--primary);
+}
+
+.modal__close:active circle,
+.modal__close:active path {
+  stroke: var(--primary-shade);
+}
+
+/* --- MODAL CONTENT --- */
+
+.modal__wrap {
+  padding: 60px 60px var(--cover-gap) 60px;
+}
+
+.modal__title {
+  margin-bottom: 17px;
+  color: var(--white);
+}
+
+.modal__descr {
+  margin-bottom: var(--cover-gap);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  color: var(--white);
+}
+
+.modal__reg {
+  padding: 2px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: var(--primary);
+  border-bottom: 1px solid transparent;
+  transition: color 0.4s ease-in-out,
+              background-color 0.4s ease-in-out,
+              border-color 0.4s ease-in-out;
+}
+
+.modal__reg:focus {
+  color: var(--white);
+  background-color: var(--primary-light);
+}
+
+.modal__reg:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background-color: transparent;
+}
+
+.modal__reg:active {
+  color: var(--primary-shade);
+  border-color: var(--primary-shade);
+  background-color: transparent;
+}
+
+.modal__form {
+  max-width: 526px;
+  margin-bottom: var(--cover-gap);
+}
+
+.modal__label {
+  position: relative;
+}
+
+.modal__input {
+  margin-bottom: var(--cover-gap);
+  padding: 25px 32px;
+}
+
+.modal__label .just-validate-error-label {
+  top: -19px;
+  left: 34px;
+}
+
+.modal__btn {
+  width: auto;
+  padding: 25px 54px;
+}
+
+.alter-login {
+  padding: 30px 0 60px 0;
+  margin: 0 60px;
+  border-top: 1px solid rgba(230, 232, 236, 0.4);
+}
+
+.alter-login__title {
+  margin-bottom: var(--cover-gap);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  color: var(--white);
+}
+
+.modal-social__list {
+  display: flex;
+}
+
+.modal-social__item:not(:last-child) {
+  margin-right: 40px;
+}
+
+.modal-social__link path,
+.modal-social__link rect {
+  transition: fill 0.4s ease-in-out;
+}
+
+.modal-social__link--vk:focus rect,
+.modal-social__link--goo:focus rect,
+.modal-social__link--fb:focus path {
+  fill: var(--primary-light);
+}
+
+.modal-social__link--vk:hover rect,
+.modal-social__link--goo:hover rect,
+.modal-social__link--fb:hover path {
+  fill: var(--primary);
+}
+
+.modal-social__link--vk:active rect,
+.modal-social__link--goo:active rect,
+.modal-social__link--fb:active path {
+  fill: var(--primary-shade);
+}

@@ -1,0 +1,152 @@
+.store {
+  background-color: var(--light-black);
+}
+
+.store__container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 98px;
+  padding-bottom: 131px;
+}
+
+.store__wrap {
+  padding-right: 15px;
+}
+
+.store__content {
+  display: flex;
+  flex-direction: column;
+  max-width: 445px;
+}
+
+.store__title {
+  margin-bottom: 19px;
+  padding-bottom: 29px;
+  color: var(--promo-color);
+}
+
+.store__back-image {
+  background-image: url(../img/1920-store-line-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: auto;
+}
+
+.store__descr {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 29px;
+  color: var(--white);
+}
+
+.store__descr--gap {
+  margin-bottom: 12px;
+}
+
+.store__price-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.store__price {
+  display: inline-block;
+  padding-top: 29px;
+  padding-bottom: 31px;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 30px;
+  color: var(--white);
+}
+
+.store__icon {
+  width: 25px;
+  height: 25px;
+  fill: var(--white);
+  transform: translateY(-3px);
+}
+
+/* --- STORE BUTTON --- */
+
+.store-button {
+  display: flex;
+  max-width: 300px;
+  border: 2px solid var(--promo-color);
+  border-radius: 100px;
+  text-align: center;
+  background-color: transparent;
+  transition: background-color 0.4s ease-in-out,
+              border-color 0.4s ease-in-out;
+}
+
+.store-button--gap {
+  padding: 23px 1px;
+}
+
+.store-button__icon {
+  display: block;
+  flex-shrink: 0;
+  margin: 0 8px 0 10px;
+}
+
+.store-button__icon path {
+  transition: fill 0.4s ease-in-out;
+}
+
+.store-button__text {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  color: var(--promo-color);
+  transition: color 0.4s ease-in-out;
+}
+
+/* --- FOCUS OF STORE BUTTON */
+
+.store-button:focus {
+  background-color: var(--promo-color-shade);
+}
+
+.store-button:focus .store-button__circle {
+  fill: var(--promo-color);
+}
+
+.store-button:focus .store-button__inner {
+  fill: var(--black);
+}
+
+.store-button:focus .store-button__text {
+  color: var(--black);
+}
+
+/* --- HOVER OF STORE BUTTON --- */
+
+.store-button:hover {
+  background-color: var(--promo-color);
+}
+
+.store-button:hover .store-button__circle {
+  fill: var(--black);
+}
+
+.store-button:hover .store-button__inner {
+  fill: var(--promo-color);
+}
+
+.store-button:hover .store-button__text {
+  color: var(--black);
+}
+
+/* --- ACTIVE OF STORE BUTTON --- */
+
+.store-button:active {
+  border-color: var(--promo-color-shade);
+  background-color: var(--promo-color-shade);
+}
+
+.store-button:active .store-button__circle {
+  fill: var(--black);
+}
+
+.store-button:active .store-button__inner {
+  fill: var(--promo-color-shade);
+}
