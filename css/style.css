@@ -1,12 +1,14 @@
 html {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   scroll-behavior: smooth;
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
 
 @font-face {
@@ -114,7 +116,8 @@ html {
 
 .img-style {
   display: block;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .stop-scroll {
@@ -130,6 +133,8 @@ html {
 }
 
 .social-link path {
+  -webkit-transition: fill 0.4s ease-in-out;
+  -o-transition: fill 0.4s ease-in-out;
   transition: fill 0.4s ease-in-out;
 }
 
@@ -163,6 +168,10 @@ html {
   font-size: 20px;
   line-height: 20px;
   color: var(--white);
+  -webkit-transition: border 0.4s ease-in-out,
+              background-color 0.4s ease-in-out;
+  -o-transition: border 0.4s ease-in-out,
+              background-color 0.4s ease-in-out;
   transition: border 0.4s ease-in-out,
               background-color 0.4s ease-in-out;
 }
@@ -194,9 +203,51 @@ html {
   line-height: 20px;
   color: var(--white);
   background-color: transparent;
+  -webkit-transition: border-color 0.4s ease-in-out,
+              background-color 0.4s ease-in-out,
+              color 0.4s ease-in-out;
+  -o-transition: border-color 0.4s ease-in-out,
+              background-color 0.4s ease-in-out,
+              color 0.4s ease-in-out;
   transition: border-color 0.4s ease-in-out,
               background-color 0.4s ease-in-out,
               color 0.4s ease-in-out;
+}
+
+.window::-webkit-input-placeholder {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  color: var(--text-gray);
+  -webkit-transition: color 0.4s ease-in-out;
+  transition: color 0.4s ease-in-out;
+}
+
+.window::-moz-placeholder {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  color: var(--text-gray);
+  -moz-transition: color 0.4s ease-in-out;
+  transition: color 0.4s ease-in-out;
+}
+
+.window:-ms-input-placeholder {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  color: var(--text-gray);
+  -ms-transition: color 0.4s ease-in-out;
+  transition: color 0.4s ease-in-out;
+}
+
+.window::-ms-input-placeholder {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  color: var(--text-gray);
+  -ms-transition: color 0.4s ease-in-out;
+  transition: color 0.4s ease-in-out;
 }
 
 .window::placeholder {
@@ -204,12 +255,30 @@ html {
   font-size: 20px;
   line-height: 20px;
   color: var(--text-gray);
+  -webkit-transition: color 0.4s ease-in-out;
+  -o-transition: color 0.4s ease-in-out;
   transition: color 0.4s ease-in-out;
 }
 
 .window:focus {
   border-color: var(--primary-light);
   background-color: var(--light-black);
+}
+
+.window:focus::-webkit-input-placeholder {
+  color: var(--white);
+}
+
+.window:focus::-moz-placeholder {
+  color: var(--white);
+}
+
+.window:focus:-ms-input-placeholder {
+  color: var(--white);
+}
+
+.window:focus::-ms-input-placeholder {
+  color: var(--white);
 }
 
 .window:focus::placeholder {

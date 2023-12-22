@@ -5,8 +5,12 @@
 }
 
 .playlists__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .playlists__aside {
@@ -45,8 +49,12 @@
 
 .section-genre__btn span {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   cursor: pointer;
 }
 
@@ -61,6 +69,10 @@
   border: 2px solid var(--text-gray);
   border-radius: 50%;
   background-color: var(--white);
+  -webkit-transition: border-color 0.4s ease-in-out,
+              background-color 0.4s ease-in-out;
+  -o-transition: border-color 0.4s ease-in-out,
+              background-color 0.4s ease-in-out;
   transition: border-color 0.4s ease-in-out,
               background-color 0.4s ease-in-out;
 }
@@ -106,8 +118,11 @@
 }
 
 .playlists__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: var(--cover-gap);
   max-width: 730px;
 }
@@ -118,11 +133,18 @@
 
 .playlists__link {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: 100%;
   outline: none;
   background-color: var(--black);
+  -webkit-transition: color 0.4s ease-in-out;
+  -o-transition: color 0.4s ease-in-out;
   transition: color 0.4s ease-in-out;
 }
 
@@ -139,6 +161,8 @@
   width: 160px;
   height: 160px;  
   opacity: 1;
+  -webkit-transition: opacity 0.4s ease-in-out;
+  -o-transition: opacity 0.4s ease-in-out;
   transition: opacity 0.4s ease-in-out;
 }
 
@@ -148,6 +172,10 @@
   background-color: var(--white);
   border: 1px solid var(--light-color);
   border-top: none;
+  -webkit-transition: background-color 0.4s ease-in-out,
+              border-color 0.4s ease-in-out;
+  -o-transition: background-color 0.4s ease-in-out,
+              border-color 0.4s ease-in-out;
   transition: background-color 0.4s ease-in-out,
               border-color 0.4s ease-in-out;
 }
@@ -157,6 +185,8 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 16px;
+  -webkit-transition: color 0.4s ease-in-out;
+  -o-transition: color 0.4s ease-in-out;
   transition: color 0.4s ease-in-out;
 }
 
@@ -165,6 +195,8 @@
   font-size: 12px;
   line-height: 12px;
   color: var(--text-gray);
+  -webkit-transition: color 0.4s ease-in-out;
+  -o-transition: color 0.4s ease-in-out;
   transition: color 0.4s ease-in-out;
 }
 
@@ -174,8 +206,17 @@
   left: 52px;
   top: 56px;
   opacity: 0;
+  -webkit-transition: opacity 0.4s ease-in-out,
+              -webkit-transform 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out,
+              -webkit-transform 0.4s ease-in-out;
+  -o-transition: opacity 0.4s ease-in-out,
+              transform 0.4s ease-in-out;
   transition: opacity 0.4s ease-in-out,
               transform 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out,
+              transform 0.4s ease-in-out,
+              -webkit-transform 0.4s ease-in-out;
 }
 
 /* --- FOCUS OF PLAYLISTS CARDS --- */
@@ -231,7 +272,9 @@
 
 .playlists__link:active .playlists__icon {
   opacity: 1;
-  transform: scale(1.2, 1.2);
+  -webkit-transform: scale(1.2, 1.2);
+      -ms-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2);
 }
 
 .playlists__link:active .playlists__card-descr,

@@ -14,8 +14,11 @@
 /* --- PODCASTS CARDS --- */
 
 .podcasts__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 30px;
 }
 
@@ -23,14 +26,6 @@
   width: calc(50% - (var(--cover-gap) / 2));
   background-color: var(--white);
 }
-
-/* .podcasts__item:nth-child(odd) {
-  margin-right: var(--cover-gap);
-}
-
-.podcasts__item:nth-last-child(n + 3) {
-  margin-bottom: var(--cover-gap);
-} */
 
 .podcasts__item:nth-last-child(-n + 4) {
   display: none;
@@ -42,8 +37,12 @@
 
 .podcasts__card {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .date {
@@ -74,8 +73,12 @@
 }
 
 .podcasts__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 21px var(--cover-gap) 24px var(--cover-gap);
   border-bottom: 1px solid var(--light-color);
 }
@@ -103,12 +106,16 @@
 }
 
 .podcasts__actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding-left: var(--cover-gap);
   padding-top: 9px;
 }
 
 .podcasts__actions-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   font-weight: 400;
   font-size: 16px;
@@ -127,17 +134,25 @@
 /* --- PLAY PODCASTS BUTTON --- */
 
 .play-podcasts {
-  transform: translateY(8%);
+  -webkit-transform: translateY(8%);
+      -ms-transform: translateY(8%);
+          transform: translateY(8%);
 }
 
 .play-podcasts svg path {
   fill: var(--text-gray);
+  -webkit-transition: fill 0.4s ease-in-out;
+  -o-transition: fill 0.4s ease-in-out;
   transition: fill 0.4s ease-in-out;
 }
 
 .play-podcasts svg circle {
   stroke: var(--text-gray);
   fill: transparent;
+  -webkit-transition: stroke 0.4s ease-in-out,
+              fill 0.4s ease-in-out;
+  -o-transition: stroke 0.4s ease-in-out,
+              fill 0.4s ease-in-out;
   transition: stroke 0.4s ease-in-out,
               fill 0.4s ease-in-out;
 }
@@ -186,6 +201,12 @@
   font-size: 20px;
   line-height: 20px;
   color: var(--primary);
+  -webkit-transition: color 0.4s ease-in-out,
+              background-color 0.4s ease-in-out,
+              border 0.4s ease-in-out;
+  -o-transition: color 0.4s ease-in-out,
+              background-color 0.4s ease-in-out,
+              border 0.4s ease-in-out;
   transition: color 0.4s ease-in-out,
               background-color 0.4s ease-in-out,
               border 0.4s ease-in-out;

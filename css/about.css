@@ -98,8 +98,13 @@
 /* --- FORM --- */
 
 .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   max-width: 920px;
 }
 
@@ -119,8 +124,13 @@
 }
 
 .form__bottom-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   width: 100%;
   margin-bottom: var(--cover-gap);
 }
@@ -166,8 +176,12 @@
 
 .checkbox .checkbox__text {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   cursor: pointer;
 }
 
@@ -189,6 +203,8 @@
   height: 14px;
   border: 1px solid var(--white);
   background-color: transparent;
+  -webkit-transition: border-color 0.4s ease-in-out;
+  -o-transition: border-color 0.4s ease-in-out;
   transition: border-color 0.4s ease-in-out;
 }
 
@@ -200,16 +216,29 @@
   left: 1px;
   width: 14px;
   height: 14px;
-  transform: scale(0);
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
   background-image: url("data:image/svg+xml,%3Csvg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.94976 1.08233L4.00002 6.03208L1.17159 3.20365' stroke='%23AA9DFA' stroke-width='2'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: center;
+  -webkit-transition: border-color 0.3s ease-in-out,
+              -webkit-transform 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out,
+              -webkit-transform 0.3s ease-in-out;
+  -o-transition: border-color 0.3s ease-in-out,
+              transform 0.3s ease-in-out;
   transition: border-color 0.3s ease-in-out,
               transform 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out,
+              transform 0.3s ease-in-out,
+              -webkit-transform 0.3s ease-in-out;
 }
 
 .checkbox input:checked + .checkbox__text::after {
-  transform: scale(1);
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
   border-color: var(--white);
 }
 
@@ -219,6 +248,8 @@
 
 .just-validate-error-label {
   position: absolute;
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   top: 10px;
   left: 31px;
