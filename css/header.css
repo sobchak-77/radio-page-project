@@ -34,6 +34,7 @@
   display: none;
   width: 24px;
   height: 24px;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .burger__line {
@@ -44,15 +45,20 @@
   border-radius: 4px;
   background-color: var(--primary);
   -webkit-transition: opacity 0.4s ease-in-out,
+              background-color 0.3s ease-in-out,
               -webkit-transform 0.4s ease-in-out;
   transition: opacity 0.4s ease-in-out,
+              background-color 0.3s ease-in-out,
               -webkit-transform 0.4s ease-in-out;
   -o-transition: transform 0.4s ease-in-out,
-              opacity 0.4s ease-in-out;
-  transition: transform 0.4s ease-in-out,
-              opacity 0.4s ease-in-out;
+              opacity 0.4s ease-in-out,
+              background-color 0.3s ease-in-out;
   transition: transform 0.4s ease-in-out,
               opacity 0.4s ease-in-out,
+              background-color 0.3s ease-in-out;
+  transition: transform 0.4s ease-in-out,
+              opacity 0.4s ease-in-out,
+              background-color 0.3s ease-in-out,
               -webkit-transform 0.4s ease-in-out;
 }
 
@@ -84,12 +90,22 @@
           transform: translateY(0) rotate(-45deg);
 }
 
+.burger:focus .burger__line,
+.burger:hover .burger__line {
+  background-color: var(--primary-light);
+}
+
+.burger:active .burger__line {
+  background-color: var(--primary-shade);
+}
+
 /* --- LIVE BUTTONS --- */
 
 .live {
   position: relative;
   z-index: 9;
   display: none;
+  cursor: pointer;
   background-color: var(--white);
 }
 
@@ -110,6 +126,18 @@
   font-size: 16px;
   line-height: 16px;
   color: var(--primary);
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+.live:focus .live__btn,
+.live:hover .live__btn {
+  color: var(--primary-light);
+}
+
+.live:active .live__btn {
+  color: var(--primary-shade);
 }
 
 .live__icon {
@@ -119,7 +147,23 @@
   transition: -webkit-transform 0.4s ease-in-out;
   -o-transition: transform 0.4s ease-in-out;
   transition: transform 0.4s ease-in-out;
-  transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out,
+              -webkit-transform 0.4s ease-in-out;
+}
+
+.live__icon circle {
+  -webkit-transition: fill 0.3s ease-in-out;
+  -o-transition: fill 0.3s ease-in-out;
+  transition: fill 0.3s ease-in-out;
+}
+
+.live:focus .live__icon circle,
+.live:hover .live__icon circle {
+  fill: var(--primary-light);
+}
+
+.live:active .live__icon circle {
+  fill: var(--primary-shade);
 }
 
 .live--active {

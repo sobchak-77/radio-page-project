@@ -273,26 +273,27 @@
     display: block;
   }
 
-  .menu__nav {
-    position: absolute;
-    top: 0;
-    left: -100%;
-    z-index: 10;
-    width: 100%;
-    height: 100vh;
-    padding: 165px 0px 98px 50px;
-    padding-left: 85px;
-    overflow-y: auto;
-    background-color: var(--text-gray);
-    -webkit-transition: -webkit-transform 0.8s ease-in-out;
-    transition: -webkit-transform 0.8s ease-in-out;
-    -o-transition: transform 0.8s ease-in-out;
-    transition: transform 0.8s ease-in-out;
-    transition: transform 0.8s ease-in-out, -webkit-transform 0.8s ease-in-out;
-  }
+.menu__nav {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  z-index: 10;
+  width: 100%;
+  height: 100vh;
+  padding: 165px 0px 98px 50px;
+  padding-left: 85px;
+  overflow-y: auto;
+  visibility: hidden;
+  background-color: var(--text-gray);
+  -webkit-transition: visibility 0.8s ease-in-out, -webkit-transform 0.8s ease-in-out;
+  transition: visibility 0.8s ease-in-out, -webkit-transform 0.8s ease-in-out;
+  -o-transition: transform 0.8s ease-in-out, visibility 0.8s ease-in-out;
+  transition: transform 0.8s ease-in-out, visibility 0.8s ease-in-out;
+  transition: transform 0.8s ease-in-out, visibility 0.8s ease-in-out, -webkit-transform 0.8s ease-in-out;
+}
 
   .burger-img {
-    background-image: url(../img/768-burger-icon.svg), url(../img/768-burger-icon-2.svg);
+    background-image: url("../img/768-burger-icon.svg"), url("../img/768-burger-icon-2.svg");
     background-repeat: no-repeat;
     background-size: auto;
     background-position-x: 63%, 83%;
@@ -300,6 +301,7 @@
   }
 
   .menu__nav--active {
+    visibility: visible;
     -webkit-transform: translateX(100%);
         -ms-transform: translateX(100%);
             transform: translateX(100%);
@@ -919,21 +921,22 @@
     margin-top: 30px;
   }
 
-  .sub-menu__nav {
-    position: absolute;
-    top: 270px;
-    left: -100%;
-    z-index: 10;
-    width: 100%;
-    padding: 30px 0 30px 34px;
-    overflow-y: auto;
-    background-color: var(--white);
-    -webkit-transition: -webkit-transform 0.8s ease-in-out;
-    transition: -webkit-transform 0.8s ease-in-out;
-    -o-transition: transform 0.8s ease-in-out;
-    transition: transform 0.8s ease-in-out;
-    transition: transform 0.8s ease-in-out, -webkit-transform 0.8s ease-in-out;
-  }
+.sub-menu__nav {
+  position: absolute;
+  top: 270px;
+  left: -100%;
+  z-index: 10;
+  width: 100%;
+  padding: 30px 0 30px 34px;
+  overflow-y: auto;
+  background-color: var(--white);
+  visibility: hidden;
+  -webkit-transition: visibility 0.8s ease-in-out, -webkit-transform 0.8s ease-in-out;
+  transition: visibility 0.8s ease-in-out, -webkit-transform 0.8s ease-in-out;
+  -o-transition: transform 0.8s ease-in-out, visibility 0.8s ease-in-out;
+  transition: transform 0.8s ease-in-out, visibility 0.8s ease-in-out;
+  transition: transform 0.8s ease-in-out, visibility 0.8s ease-in-out, -webkit-transform 0.8s ease-in-out;
+}
 
   .sub-menu__list {
     -webkit-box-orient: vertical;
@@ -956,6 +959,7 @@
   }
   
   .sub-menu__nav--active {
+    visibility: visible;
     -webkit-transform: translateX(100%);
         -ms-transform: translateX(100%);
             transform: translateX(100%);
@@ -963,11 +967,12 @@
 
   .on-air {
     top: 149px;
-    -webkit-transition: -webkit-transform 0.8s ease-in-out;
-    transition: -webkit-transform 0.8s ease-in-out;
-    -o-transition: transform 0.8s ease-in-out;
-    transition: transform 0.8s ease-in-out;
-    transition: transform 0.8s ease-in-out, -webkit-transform 0.8s ease-in-out;
+    visibility: hidden;
+    -webkit-transition: visibility 0.8s ease-in-out, -webkit-transform 0.8s ease-in-out;
+    transition: visibility 0.8s ease-in-out, -webkit-transform 0.8s ease-in-out;
+    -o-transition: transform 0.8s ease-in-out, visibility 0.8s ease-in-out;
+    transition: transform 0.8s ease-in-out, visibility 0.8s ease-in-out;
+    transition: transform 0.8s ease-in-out, visibility 0.8s ease-in-out, -webkit-transform 0.8s ease-in-out;
   }
 
   .on-air__card--past {
@@ -975,6 +980,7 @@
   }
 
   .on-air--active {
+    visibility: visible;
     -webkit-transform: translateX(140%);
         -ms-transform: translateX(140%);
             transform: translateX(140%);
