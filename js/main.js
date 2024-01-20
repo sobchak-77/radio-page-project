@@ -141,9 +141,9 @@ subMenuLinks.forEach(function (el) {
 window.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') {
     burger.classList.remove('burger--active');
-    menu.classList.toggle('menu__nav--active');
-    subMenu.classList.toggle('sub-menu__nav--active');
-    page.classList.toggle('stop-scroll');
+    menu.classList.remove('menu__nav--active');
+    subMenu.classList.remove('sub-menu__nav--active');
+    page.classList.remove('stop-scroll');
   };
 });
 
