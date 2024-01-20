@@ -111,7 +111,6 @@ let subMenuLinks = subMenu.querySelectorAll('.sub-menu__link');
 let page = document.querySelector('.page');
 
 burger.addEventListener('click',
-
   function () {
     burger.classList.toggle('burger--active');
     menu.classList.toggle('menu__nav--active');
@@ -121,7 +120,6 @@ burger.addEventListener('click',
 
 menuLinks.forEach(function (el) {
   el.addEventListener('click',
-
     function () {
       burger.classList.remove('burger--active');
       menu.classList.remove('menu__nav--active');
@@ -140,6 +138,15 @@ subMenuLinks.forEach(function (el) {
     });
 });
 
+window.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    burger.classList.remove('burger--active');
+    menu.classList.toggle('menu__nav--active');
+    subMenu.classList.toggle('sub-menu__nav--active');
+    page.classList.toggle('stop-scroll');
+  };
+});
+
 // --- LIVE BUTTONS ---
 
 let live = document.querySelector('.live');
@@ -154,12 +161,12 @@ live.addEventListener('click',
 
 // --- MODAL WINDOW ---
 
-document.getElementById('open-login-modal').addEventListener('click', function() {
+document.getElementById('open-login-modal').addEventListener('click', function () {
   document.getElementById('login-modal').classList.add('open');
   document.querySelector('.page').classList.add('stop-scroll');
 });
 
-document.getElementById('close-login-modal').addEventListener('click', function() {
+document.getElementById('close-login-modal').addEventListener('click', function () {
   document.getElementById('login-modal').classList.remove('open');
   document.querySelector('.page').classList.remove('stop-scroll');
 });
