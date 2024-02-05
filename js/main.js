@@ -109,6 +109,7 @@ let subMenu = document.querySelector('.sub-menu__nav');
 let menuLinks = menu.querySelectorAll('.menu__link');
 let subMenuLinks = subMenu.querySelectorAll('.sub-menu__link');
 let page = document.querySelector('.page');
+let header = document.querySelector('.header');
 
 burger.addEventListener('click',
   function () {
@@ -116,6 +117,7 @@ burger.addEventListener('click',
     menu.classList.toggle('menu__nav--active');
     subMenu.classList.toggle('sub-menu__nav--active');
     page.classList.toggle('stop-scroll');
+    header.classList.toggle('header-scroll');
   });
 
 menuLinks.forEach(function (el) {
@@ -125,6 +127,7 @@ menuLinks.forEach(function (el) {
       menu.classList.remove('menu__nav--active');
       subMenu.classList.remove('sub-menu__nav--active');
       page.classList.remove('stop-scroll');
+      header.classList.remove('header-scroll');
     });
 });
 
@@ -135,6 +138,7 @@ subMenuLinks.forEach(function (el) {
       menu.classList.remove('menu__nav--active');
       subMenu.classList.remove('sub-menu__nav--active');
       page.classList.remove('stop-scroll');
+      header.classList.remove('header-scroll');
     });
 });
 
@@ -144,6 +148,7 @@ window.addEventListener('keydown', (e) => {
     menu.classList.remove('menu__nav--active');
     subMenu.classList.remove('sub-menu__nav--active');
     page.classList.remove('stop-scroll');
+    header.classList.remove('header-scroll');
   };
 });
 
